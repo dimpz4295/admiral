@@ -376,6 +376,7 @@ The following example demonstrates how to derive baseline toxicity grade variabl
 
 ```{r, eval=TRUE}
 adlb <- adlb %>%
+  mutate(ABLFL = "Y") %>%
   derive_var_base(
     by_vars = exprs(STUDYID, USUBJID, PARAMCD),
     source_var = ATOXGRL,
